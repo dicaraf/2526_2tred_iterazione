@@ -14,7 +14,7 @@ Esercizio A5) Il programma deve continuare a lanciare dadi e a scriverne il risu
 
 Esercizio A6) Il programma genera un numero naturale casuale compreso tra 1 e 10 e l’utente deve indovinare il numero generato, il programma termina quando viene indovinato.
 
-Esercizio A7) Il programma genera un numero naturale casuale compreso tra 1 e 100 e l’utente deve indovinare il numero generato, ad ogni tentativo il programma dice se il numero inserito era troppo alto o troppo basso; il programma termina quando viene indovinato.
+Esercizio A7) Il programma genera un numero naturale casuale compreso tra 1 e 100 e l’utente deve indovinare il numero generato, ad ogni tentativo il programma dice se il numero inserito era troppo alto o troppo basso; il programma termina quando viene indovinato. Se l'utente indovina in meno di 3 tentativi mostrare "Aura", se ci mette tra 4 e 10 tentativi mostrare "Bravino", altrimento mostrare "Brutto".
 
 Es 1. Scrivere i primi cento numeri naturali.
 
