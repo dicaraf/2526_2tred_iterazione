@@ -51,4 +51,3 @@ Es 15. Scrivere un programma che lancia 10 dadi a 6 facce e se la somma dei risu
 
 
 Es 16. Scrivere un programma che chiede un numero all’utente poi estrae 5 numeri compresi tra 1 e 90 compresi (tipo la tombola) e dice se è uscito il numero inserito dall’utente.
-(soluzione: C++)
