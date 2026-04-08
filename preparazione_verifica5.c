@@ -1,40 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    int prezzo;
-    int totaleOriginale = 0;
-    int totaleScontato = 0;
-    int prodottoPiuCaro = -1, prodottoMenoCaro = -1;
-    int count = 0;
+    int prezzo, totaleOriginale = 0, totaleScontato = 0, prodottoPiuCaro = -1, prodottoMenoCaro = -1;
+    int count = 0, prezzoScontato;
+    float sconto;
 
     printf("Inserisci i prezzi in centesimi (0 per terminare):\n");
 
-    while (1) {
+    do {
         printf("Prezzo prodotto %d: ", count + 1);
         scanf("%d", &prezzo);
 
-        if (prezzo == 0) break;
-
         if (prezzo < 0) {
-            printf("Prezzo non valido, inserisci un valore positivo.\n");
-            continue;
+            printf("Prezzo non valido. \n");
         }
 
         count++;
-        int prezzoScontato;
-        float sconto;
 
         if (prezzo < 100) {
             sconto = prezzo * 0.05;
             prezzoScontato = prezzo - (int)sconto;
-            printf("  → Sconto 5%% applicato: %d centesimi\n", prezzoScontato);
+            printf("Sconto 5%% applicato: %d centesimi\n", prezzoScontato);
         } else if (prezzo <= 500) {
             prezzoScontato = prezzo;
-            printf("  → Nessuno sconto\n");
+            printf("Nessuno sconto\n");
         } else {
             sconto = prezzo * 0.10;
             prezzoScontato = prezzo - (int)sconto;
-            printf("  → Sconto 10%% applicato: %d centesimi\n", prezzoScontato);
+            printf("Sconto 10%% applicato: %d centesimi\n", prezzoScontato);
         }
 
         totaleOriginale += prezzo;
@@ -42,7 +35,7 @@ int main() {
 
         if (prodottoPiuCaro == -1 || prezzo > prodottoPiuCaro) prodottoPiuCaro = prezzo;
         if (prodottoMenoCaro == -1 || prezzo < prodottoMenoCaro) prodottoMenoCaro = prezzo;
-    }
+    }while (prezzo > 0);
 
     if (count == 0) {
         printf("Nessun prodotto inserito.\n");
